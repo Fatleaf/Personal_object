@@ -1,0 +1,226 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: 60px;
+  background-color: cadetblue;
+}
+
+.photo {
+  width: 100%;
+  height: 60px;
+  background-color: green;
+}
+
+header {
+  height: 100vh;
+}
+
+#section01 .container {
+  height: calc(100vh - 108px);
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav .list-group {
+  height: 100vh;
+}
+
+nav .list-group ul {
+  height: 60%;
+  width: 140px;
+  position: relative;
+  padding: 0;
+}
+
+nav .list-group ul a {
+  list-style-type: none;
+  width: 80px;
+  height: 50px;
+  background-color: black;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 12px;
+}
+
+nav .list-group ul a li {
+  list-style-type: none;
+  color: white;
+}
+
+nav .list-group ul .longer {
+  width: 150px;
+  font-size: 18px;
+}
+
+nav .list-group ul .hide {
+  opacity: 0;
+}
+
+#section02 .box {
+  height: 300px;
+}
+
+#section02 .col-4:nth-child(2) .box {
+  height: unset;
+}
+
+#section02 .col-4:nth-child(4) .box {
+  height: unset;
+}
+
+#section03 {
+  position: relative;
+  padding: 0 80px;
+}
+
+#section03 .box {
+  height: 90vh;
+  width: 12.5%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding-bottom: 20px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: 32px;
+}
+
+#section03 .box span {
+  height: 120px;
+}
+
+#section03 .box:hover {
+  width: 20%;
+}
+
+#section03 h1 {
+  position: absolute;
+  top: 50px;
+  left: 6.25%;
+  z-index: 1;
+}
+
+#section04 .box {
+  height: 500px;
+}
+
+#section05 .box {
+  height: 445px;
+  width: 445px;
+  position: relative;
+}
+
+#section05 .box:nth-child(1)::after {
+  content: '';
+  height: 2px;
+  width: 475px;
+  background-color: black;
+  position: absolute;
+  top: 46%;
+  left: 444px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#section05 .box:nth-child(2), #section05 .box:nth-child(5) {
+  width: 255px;
+  height: unset;
+  background-color: unset;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+#section05 .box:nth-child(4)::before {
+  content: '';
+  height: 2px;
+  width: 475px;
+  background-color: black;
+  position: absolute;
+  top: 49%;
+  right: 444px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#section06 .content {
+  background-color: darkgray;
+  height: 572px;
+}
+
+#section06 #connection {
+  font-size: 21px;
+}
+
+#section06 #connection .box {
+  height: 62.3px;
+  width: 62.3px;
+}
+
+#section06 #connection span {
+  font-size: 18px;
+}
+
+#section06 #giveback label {
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  background-color: forestgreen;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#section06 #giveback input {
+  width: 70%;
+  height: 30px;
+}
+
+#section06 #giveback textarea {
+  height: 200px;
+  width: 100%;
+}
+
+#section06 #giveback .btn {
+  width: 150px;
+  /* height: 30px; */
+  background-color: teal;
+  /* line-height: 30px; */
+  margin: 20px 132.5px;
+}
+
+#section06 .contain {
+  width: 100%;
+}
+
+#section06 .icon {
+  height: 50px;
+  width: 50px;
+  background-color: goldenrod;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
