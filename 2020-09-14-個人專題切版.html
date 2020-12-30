@@ -27,6 +27,19 @@
             <div class="container-fluid d-flex" id="logo">
                 <div class="logo"></div>
                 <h3 class="logo_text">蛤仔麵</h3>
+
+                <div id="nav_phone" class="ml-auto">
+                    選單
+                    <ul>
+                        <li><a href="#section01">首&emsp;&emsp;頁</a></li>
+                        <li><a href="#section02">傳統作法</a></li>
+                        <li><a href="#section03">新鮮食材</a></li>
+                        <li><a href="#section04">美味菜單</a></li>
+                        <li><a href="#section05">關於江淮</a></li>
+                        <li><a href="#section06">聯絡我們</a></li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="container p-5 d-flex justify-content-center align-items-center">
@@ -43,7 +56,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav id="navBig">
         <div class="list-group d-flex justify-content-center">
             <ul class="d-flex flex-wrap justify-content-end align-items-center">
                 <a href="#section01">
@@ -235,7 +248,7 @@
 
         <!-- 關於江淮區塊 -->
         <div id="section05">
-            <div class="container p-5">
+            <div class="container py-5">
                 <h1 style="text-align: center;">關於江淮</h1>
                 <div class="row justify-content-between align-items-center py-4">
                     <div class="box photo_center rounded-circle" style="background-image: url(images/06-關於我們/880.jpg);"></div>
@@ -244,7 +257,7 @@
                     </div>
                     <div class="w-100"></div>
                     <div class="box rounded-circle order-lg-1" style="background-image: url(images/06-關於我們/新鮮.jpg);"></div>
-                    <div class="box offset-lg-4">
+                    <div class="box offset-lg-3">
                         <h2 class="mb-3">使命</h2>新鮮食材嚴格把關，攝取足夠營養，讓您的心靈和身體都得到照顧。
                     </div>
                 </div>
@@ -262,11 +275,13 @@
                         </div>
                         <div class="text col-9 mb-4">
                             <span>電話</span><br>04-728-6745</div>
+                            <div class="w-100"></div>
                         <div class="box mb-4">
                             <img width="100%" src="images/05-Icon/營業時間.png" alt="">
                         </div>
                         <div class="text col-9 mb-4">
                             <span>營業時間</span><br>基本上、每天10:00~19:00</div>
+                            <div class="w-100"></div>
                         <div class="box">
                             <img width="100%" src="images/05-Icon/地址.png" alt="">
                         </div>
@@ -296,15 +311,11 @@
                                 <option value="">環境</option>
                             </select>
 
-                            <!-- <label for="title">建議主旨:</label>
-                            <input type="text" name="title" id="feedBackTypeTitle">
-                            <div id="feedBackTypeTip" class="tip"></div> -->
-
                             <label for="">寶貴意見:</label>
                             <textarea name="" id="" cols="30" rows="10" name="description"></textarea>
                         </div>
                     </form>
-                    <div class="btn">這是按鈕</div>
+                    <div class="btn" id="submit">這是按鈕</div>
                 </div>
 
                 <div class="contain col-12 d-flex justify-content-center pt-5">

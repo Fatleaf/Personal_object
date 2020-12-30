@@ -64,11 +64,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
 
-    #logo{
-        background-attachment: fixed;    
-    }
-
-
     #headerPhoto{
 
         img{
@@ -178,6 +173,7 @@ header {
 
     .container-fluid{
         position: fixed;
+        z-index: 3;
         .logo{
             height: 90px;
             width: 90px;
@@ -192,6 +188,44 @@ header {
             margin: 0;
             margin-left: 10px;
         }
+
+        //手機板NAV
+        #nav_phone{
+            width: 90px;
+            height: 90px;
+            background-color: $red01;
+            display: block;
+            color: white;
+            text-align: center;
+            line-height: 90px;
+
+            ul{
+                padding: 0;
+                list-style-type: none;
+
+                li{
+                    display: list-item;
+                    background-color: $red01;
+                    text-align: center;
+                    padding: 10px 0;
+                    line-height: 20px;
+
+                    // &:hover{
+                    //     display: block;
+                    // }
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+
+            }
+            // &:hover~ul {
+            //     display: block;
+            // }
+        }
+
     }
 
     .container{
@@ -369,6 +403,15 @@ nav {
                 height: unset;
                 padding: 30px;
             }
+
+            &:hover{
+                width: 100%;
+                z-index: 4;
+                cursor: pointer;
+            }
+        }
+        .mask{
+            display: none;
         }
         
     }
@@ -435,10 +478,16 @@ nav {
             background-color: black;
 
             position: absolute;
-            top: 49%;
+            top: 47%;
             right: 444px;
             transform: translateY(-50%);
         }
+
+        @media (max-width: 572px) {
+            height: 300px;
+            width: 300px;
+        }
+
 
     }
     @media (max-width: 991.98px) {

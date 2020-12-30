@@ -58,10 +58,6 @@ header {
   background-repeat: no-repeat;
 }
 
-header #logo {
-  background-attachment: fixed;
-}
-
 header #headerPhoto img:nth-child(1) {
   z-index: 1;
   position: relative;
@@ -158,6 +154,7 @@ header #headerPhoto img:nth-child(5) {
 
 #section01 .container-fluid {
   position: fixed;
+  z-index: 3;
 }
 
 #section01 .container-fluid .logo {
@@ -174,6 +171,34 @@ header #headerPhoto img:nth-child(5) {
   letter-spacing: 10px;
   margin: 0;
   margin-left: 10px;
+}
+
+#section01 .container-fluid #nav_phone {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(255, 0, 0, 0.644);
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+}
+
+#section01 .container-fluid #nav_phone ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#section01 .container-fluid #nav_phone ul li {
+  display: list-item;
+  background-color: rgba(255, 0, 0, 0.644);
+  text-align: center;
+  padding: 10px 0;
+  line-height: 20px;
+}
+
+#section01 .container-fluid #nav_phone ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 #section01 .container {
@@ -346,6 +371,14 @@ nav .list-group ul .hide {
     height: unset;
     padding: 30px;
   }
+  #section03 .photo:hover {
+    width: 100%;
+    z-index: 4;
+    cursor: pointer;
+  }
+  #section03 .mask {
+    display: none;
+  }
 }
 
 #section04 {
@@ -400,10 +433,17 @@ nav .list-group ul .hide {
   width: 475px;
   background-color: black;
   position: absolute;
-  top: 49%;
+  top: 47%;
   right: 444px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (max-width: 572px) {
+  #section05 .box {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 @media (max-width: 991.98px) {
