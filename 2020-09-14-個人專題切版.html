@@ -11,31 +11,34 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
-    <style>
+
+    <!-- <style>
         /* [data-aos=fade-right] {
             transform: translate3d(-100px, 0, 0);
         } */
         /* 更改X軸位置 */
-    </style>
+    </style> -->
 
 </head>
 
 <body>
     <header>
         <div id="section01">
-            <div class="container-fluid">
-                <div class="col-2 p-4">
-                    <div class="box"></div>
-                </div>
+            <div class="container-fluid d-flex" id="logo">
+                <div class="logo"></div>
+                <h3 class="logo_text">蛤仔麵</h3>
             </div>
 
             <div class="container p-5 d-flex justify-content-center align-items-center">
-                <!-- <div class="photo_group"></div> -->
-                <div class="col-8">
-                    <div class="photo" style="height: 450px;"></div>
 
+                <div id="headerPhoto" class="col-12 col-lg-8">
+                    <img width="100%" src="/images/01-頁首/蛤仔麵01.png" alt="">
+                    <img data-aos="fade-down" data-aos-delay="600" data-aos-duration="2000" width="50%" src="/images/02-食材/蛤蠣01.png" alt="">
+                    <img data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" data-aos-anchor-placement="top" width="70%" src="/images/01-頁首/葉菜去背.png" alt="">
+                    <img data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-anchor-placement="top" width="60%" src="/images/01-頁首/高麗菜去背.png" alt="">
+                    <img data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" width="60%" src="/images/01-頁首/蔥去背.png" alt="">
                 </div>
-                <!-- </div> -->
+
             </div>
         </div>
     </header>
@@ -66,126 +69,249 @@
     </nav>
 
     <main>
+
+        <!-- 傳統作法區塊 -->
         <div id="section02">
             <div class="container p-5">
                 <h1 style="text-align: center;">傳統作法</h1>
                 <div class="row no-gutters justify-content-center align-items-center p-4">
-                    <div class="col-4">
-                        <div class="box"></div>
-                    </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <div class="p-3">
                             <h2 style="text-align: center; margin-bottom: 30px;">湯</h2>採用大骨與蛤蠣與新鮮食材熬煮，
                             味道鮮甜又不失風味，
                             每口都能振奮您的精神。
                         </div>
                     </div>
+                    <div class="col-12 col-lg-4 picture">
+                        <div class="box sec02_photo01"></div>
+                    </div>
+
                     <div class="w-100"></div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 picture order-1 order-lg-0">
+                        <div class="box sec02_photo02"></div>
+                    </div>
+                    <div class="col-12 col-lg-4">
                         <div class="p-3">
                             <h2 style="text-align: center; margin-bottom: 30px;">特調滷汁</h2>嚴選當地合格豬與多種食材搭配而成，
                             不斷研究創出甜鹹適中的味道，
                             既健康又不傷身。
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="box"></div>
-                    </div>
+
                 </div>
             </div>
         </div>
+
+        <!-- 新鮮食材區塊 -->
         <div id="section03">
-            <div class="container-fluid d-flex">
+            <div class="container-fluid d-flex p-0 flex-wrap flex-lg-nowrap">
                 <h1>新鮮食材</h1>
-                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>地瓜葉</span></div>
-                <div class="box bg-secondary" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>A菜</span>
+                <div class="photo" style="background-image: url(/images/02-食材/地瓜葉.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>地瓜葉</span></div>
+                <div class="photo" style="background-image: url(/images/02-食材/萵苣.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>A菜</span>
                 </div>
-                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>豬肉</span></div>
-                <div class="box bg-secondary" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>雞肉</span>
+                <div class="photo" style="background-image: url(/images/02-食材/豬肉01.JPG);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>豬肉</span></div>
+                <div class="photo" style="background-image: url(/images/02-食材/雞肉.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>雞肉</span>
                 </div>
-                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>蛤蠣</span></div>
-                <div class="box bg-secondary" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>蝦子</span>
+                <div class="photo" style="background-image: url(/images/02-食材/蛤蠣.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>蛤蠣</span></div>
+                <div class="photo" style="background-image: url(/images/02-食材/蝦子01.JPG);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>蝦子</span>
                 </div>
-                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>高麗菜</span></div>
-                <div class="box bg-secondary" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>空心菜</span>
+                <div class="photo" style="background-image: url(/images/02-食材/高麗菜.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>高麗菜</span></div>
+                <div class="photo" style="background-image: url(/images/02-食材/空心菜.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>空心菜</span>
                 </div>
+                <div class="mask"></div>
             </div>
         </div>
+
+        <!-- 美味菜單區塊 -->
         <div id="section04">
             <div class="container pt-5">
                 <h1 style="text-align: center;">美味菜單</h1>
                 <div class="row justify-content-around p-4">
-                    <div class="col-4 p-2">
-                        <div class="box"></div>
+                    <div class="col-12 col-lg-4 p-2">                        
+                        <div class="text_center">麵飯米粉<small>大碗加10元</small></div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="menu_name">品&emsp;&emsp;名</th>
+                                    <th>單價</th>
+                                    <th>小</th>
+                                    <th>大</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text_left">蛤仔麵</th>
+                                    <th>40</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">蛤仔米粉</th>
+                                    <th>40</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">蛤仔飯</th>
+                                    <th>40</th>
+                                    <th></th>   
+                                    <th></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <div class="box"></div> -->
                     </div>
-                    <div class="col-4 p-2">
-                        <div class="box"></div>
+                    <div class="col-12 col-lg-4 p-2">
+                        <div class="text_center">小菜<small>大碗加10元</small></div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="menu_name">品&emsp;&emsp;名</th>
+                                    <th>單價</th>
+                                    <th>小</th>
+                                    <th>大</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text_left">豆包</th>
+                                    <th>10</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">蝦丸二粒</th>
+                                    <th>10</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">香菇貢丸一粒</th>
+                                    <th>10</th>
+                                    <th></th>   
+                                    <th></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <div class="box"></div> -->
                     </div>
-                    <div class="col-4 p-2">
-                        <div class="box"></div>
+                    <div class="col-12 col-lg-4 p-2">
+                        <div class="text_center">湯類<small>大碗加10元</small></div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="menu_name">品&emsp;&emsp;名</th>
+                                    <th>單價</th>
+                                    <th>小</th>
+                                    <th>大</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text_left">蛤仔湯</th>
+                                    <th>30</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">雞捲湯</th>
+                                    <th>40</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="text_left">蝦丸湯</th>
+                                    <th>30</th>
+                                    <th></th>   
+                                    <th></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <div class="box"></div> -->
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 關於江淮區塊 -->
         <div id="section05">
             <div class="container p-5">
                 <h1 style="text-align: center;">關於江淮</h1>
                 <div class="row justify-content-between align-items-center py-4">
-                    <div class="box rounded-circle"></div>
-                    <div class="box" style="margin-right: 255px;">
+                    <div class="box photo_center rounded-circle" style="background-image: url(/images/06-關於我們/880.jpg);"></div>
+                    <div class="box">
                         <h2 class="mb-3">理念</h2>在地多年老店，致力給顧客最新鮮的當地特色小吃，希望每位顧客都可以享受江淮的美味平價料理。
                     </div>
                     <div class="w-100"></div>
-                    <div class="box rounded-circle order-lg-1"></div>
+                    <div class="box rounded-circle order-lg-1" style="background-image: url(/images/06-關於我們/新鮮.jpg);"></div>
                     <div class="box offset-lg-4">
                         <h2 class="mb-3">使命</h2>新鮮食材嚴格把關，攝取足夠營養，讓您的心靈和身體都得到照顧。
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 聯絡我們區塊 -->
         <div id="section06">
             <div class="container d-flex justify-content-around flex-wrap py-5">
-                <div id="connection" class="content col-5" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                <div id="connection" class="content col-12 col-lg-5 mt-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <h2 class="col-12 p-4" style="text-align: center;">聯絡我們</h2>
                     <div class="col-12 d-flex flex-wrap align-items-center">
-                        <div class="box mb-4"></div>
+                        <div class="box mb-4">
+                            <img width="100%" src="/images/05-Icon/電話.png" alt="">
+                        </div>
                         <div class="text col-9 mb-4">
                             <span>電話</span><br>04-728-6745</div>
-                        <div class="box mb-4"></div>
+                        <div class="box mb-4">
+                            <img width="100%" src="/images/05-Icon/營業時間.png" alt="">
+                        </div>
                         <div class="text col-9 mb-4">
                             <span>營業時間</span><br>基本上、每天10:00~19:00</div>
-                        <div class="box"></div>
+                        <div class="box">
+                            <img width="100%" src="/images/05-Icon/地址.png" alt="">
+                        </div>
                         <div class="text col-9">
                             <span>地址</span><br>500彰化縣彰化市華山路73號</div>
                     </div>
 
                 </div>
 
-                <div id="giveback" class="content col-5" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                <div id="giveback" class="content col-12 col-lg-5 mt-4" data-aos="fade-down" data-aos-anchor-placement="top-center">
                     <h2 class="col-12 p-4" style="text-align: center;">提供意見</h2>
                     <form method="POST" action="">
                         <div class="col-12 d-flex flex-wrap">
-                            <!-- <span>暱稱</span> -->
-                            <label for="">暱稱</label>
-                            <input type="text" name="name">
-                            <label for="">電子信箱</label>
-                            <input type="text" name="email">
-                            <label for="">建議類別</label>
-                            <input type="text" name="sort">
-                            <label for="">建議主旨</label>
-                            <input type="text" name="title">
-                            <label for="">寶貴意見</label>
+
+                            <label for="guess_name">暱&emsp;&emsp;稱:</label>
+                            <input type="text" name="guess_name" id="guess_name" placeholder="請輸入文字">
+                            <div id="nametip" class="tip"></div>
+
+                            <label for="email">電子信箱:</label>
+                            <input type="email" name="email" id="vote_email">
+
+                            <label for="FeedBackType">建議類別:</label>
+                            <select name="FeedBackType" id="FeedBackType">
+                                <option value="" hidden>--請選擇--</option>
+                                <option value="">食物</option>
+                                <option value="">服務</option>
+                                <option value="">環境</option>
+                            </select>
+
+                            <!-- <label for="title">建議主旨:</label>
+                            <input type="text" name="title" id="feedBackTypeTitle">
+                            <div id="feedBackTypeTip" class="tip"></div> -->
+
+                            <label for="">寶貴意見:</label>
                             <textarea name="" id="" cols="30" rows="10" name="description"></textarea>
                         </div>
                     </form>
-                    <div class="btn col-12">這是按鈕</div>
+                    <div class="btn">這是按鈕</div>
                 </div>
 
                 <div class="contain col-12 d-flex justify-content-center pt-5">
                     <div class="row">
-                        <div class="icon m-2"></div>
-                        <div class="icon m-2"></div>
-                        <div class="icon m-2"></div>
+                        <a href="https://www.facebook.com/pages/%E8%8F%AF%E5%B1%B1%E8%B7%AF%20%E6%B1%9F%E6%B7%AE%E8%9B%A4%E4%BB%94%E9%BA%B5/536306110067936/" class="icon m-2">
+                            <img width="100%" src="/images/05-Icon/FBICON.png" alt="">
+                        </a>
                     </div>
 
                 </div>
@@ -194,14 +320,11 @@
 
     </main>
     <footer>
-        <div class="col-12 bg-secondary">Copyright©</div>
+        <div class="col-12 bg-dark">Copyright© YiChang 練習</div>
     </footer>
 
 
-    <script src="js/style.js"></script>
-
-
-
+    <!-- 以下JS套件區 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -215,6 +338,9 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="/js/style.js"></script>
+
 </body>
 
 </html>

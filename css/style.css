@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,15 +14,174 @@
   width: 100%;
   height: 60px;
   background-color: green;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.photo_center {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text_center {
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-color: brown;
+  color: white;
+}
+
+.tip {
+  color: red;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.menu_name {
+  width: 76%;
 }
 
 header {
   height: 100vh;
+  background-image: url(/images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header #logo {
+  background-attachment: fixed;
+}
+
+header #headerPhoto img:nth-child(1) {
+  z-index: 1;
+  position: relative;
+  top: 0;
+}
+
+header #headerPhoto img:nth-child(2) {
+  z-index: 0;
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header #headerPhoto img:nth-child(3) {
+  z-index: 2;
+  position: absolute;
+  bottom: -200px;
+  left: 50px;
+}
+
+header #headerPhoto img:nth-child(4) {
+  z-index: 2;
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+}
+
+header #headerPhoto img:nth-child(5) {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: -70px;
+}
+
+@media (max-width: 767.98px) {
+  header #headerPhoto img:nth-child(2) {
+    z-index: 0;
+    position: absolute;
+    bottom: -100px;
+    left: -24%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  header #headerPhoto img:nth-child(3) {
+    z-index: 2;
+    position: absolute;
+    bottom: -32%;
+    left: 50px;
+  }
+  header #headerPhoto img:nth-child(4) {
+    z-index: 2;
+    position: absolute;
+    bottom: -32%;
+    right: 0;
+  }
+  header #headerPhoto img:nth-child(5) {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: -70px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header #headerPhoto img:nth-child(2) {
+    z-index: 0;
+    position: absolute;
+    bottom: -13%;
+    left: -15%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  header #headerPhoto img:nth-child(3) {
+    z-index: 2;
+    position: absolute;
+    bottom: -32%;
+    left: 50px;
+  }
+  header #headerPhoto img:nth-child(4) {
+    z-index: 2;
+    position: absolute;
+    bottom: -32%;
+    right: 0;
+  }
+  header #headerPhoto img:nth-child(5) {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+  }
+}
+
+#section01 .container-fluid {
+  position: fixed;
+}
+
+#section01 .container-fluid .logo {
+  height: 90px;
+  width: 90px;
+  background-image: url(/images/01-頁首/LOGO.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section01 .container-fluid .logo_text {
+  line-height: 90px;
+  letter-spacing: 10px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 #section01 .container {
   height: calc(100vh - 108px);
-  position: relative;
+}
+
+#section01 .container .photo {
+  background-color: transparent;
 }
 
 nav {
@@ -46,18 +206,20 @@ nav .list-group ul a {
   list-style-type: none;
   width: 80px;
   height: 50px;
-  background-color: black;
+  background-color: rgba(255, 0, 0, 0.644);
   line-height: 50px;
   text-align: center;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-size: 12px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 nav .list-group ul a li {
   list-style-type: none;
-  color: white;
+  color: black;
 }
 
 nav .list-group ul .longer {
@@ -69,28 +231,43 @@ nav .list-group ul .hide {
   opacity: 0;
 }
 
+#section02 {
+  background-color: #e3e1df;
+}
+
 #section02 .box {
   height: 300px;
 }
 
-#section02 .col-4:nth-child(2) .box {
-  height: unset;
+#section02 .picture .sec02_photo01 {
+  background-image: url(/images/03-做法/清湯.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
-#section02 .col-4:nth-child(4) .box {
-  height: unset;
+#section02 .picture .sec02_photo02 {
+  background-image: url(/images/03-做法/滷汁.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 #section03 {
   position: relative;
-  padding: 0 80px;
 }
 
-#section03 .box {
-  height: 90vh;
-  width: 12.5%;
+#section03 .photo {
+  height: 100vh;
+  width: 600px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-size: cover;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,23 +288,81 @@ nav .list-group ul .hide {
   font-size: 32px;
 }
 
-#section03 .box span {
+#section03 .photo span {
   height: 120px;
 }
 
-#section03 .box:hover {
+#section03 .photo:hover {
   width: 20%;
+  z-index: 4;
+  cursor: pointer;
+}
+
+#section03 .photo:hover ~ .mask {
+  background-color: rgba(0, 0, 0, 0.815);
+  z-index: 3;
+}
+
+#section03 .mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #section03 h1 {
   position: absolute;
   top: 50px;
   left: 6.25%;
-  z-index: 1;
+  z-index: 5;
+  color: white;
 }
 
-#section04 .box {
-  height: 500px;
+@media (max-width: 991.98px) {
+  #section03 h1 {
+    position: unset;
+    color: black;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+  }
+  #section03 .photo {
+    height: 12.5%;
+    width: 100%;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #section03 .photo span {
+    height: unset;
+    padding: 30px;
+  }
+}
+
+#section04 {
+  background-color: #e3e1df;
+}
+
+#section04 table {
+  text-align: center;
+  width: 100%;
+}
+
+#section04 table th {
+  padding: 3px;
+}
+
+#section04 table thead tr th {
+  border-bottom: 2px solid black;
 }
 
 #section05 .box {
@@ -152,8 +387,11 @@ nav .list-group ul .hide {
   width: 255px;
   height: unset;
   background-color: unset;
-  font-size: 14px;
   line-height: 25px;
+}
+
+#section05 .box:nth-child(2) {
+  margin-right: 255px;
 }
 
 #section05 .box:nth-child(4)::before {
@@ -168,9 +406,50 @@ nav .list-group ul .hide {
           transform: translateY(-50%);
 }
 
+@media (max-width: 991.98px) {
+  #section05 .box:nth-child(1)::after {
+    content: '';
+    height: 0;
+    width: 0;
+    background-color: black;
+    position: unset;
+  }
+  #section05 .box:nth-child(4)::before {
+    content: '';
+    height: 0;
+    width: 0;
+    background-color: black;
+    position: unset;
+  }
+  #section05 .box:nth-child(2), #section05 .box:nth-child(5) {
+    width: 100%;
+    height: unset;
+    background-color: unset;
+    line-height: 25px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  #section05 .box:nth-child(1), #section05 .box:nth-child(4) {
+    margin: auto;
+  }
+}
+
+#section06 {
+  background-color: #e3e1df;
+}
+
 #section06 .content {
-  background-color: darkgray;
   height: 572px;
+  border: 2px solid black;
+}
+
+#section06 .content:nth-child(1) {
+  background-color: darkgray;
+}
+
+#section06 .content:nth-child(2) {
+  background-color: darkgray;
+  color: black;
 }
 
 #section06 #connection {
@@ -180,9 +459,11 @@ nav .list-group ul .hide {
 #section06 #connection .box {
   height: 62.3px;
   width: 62.3px;
+  background-color: transparent;
 }
 
 #section06 #connection span {
+  border-bottom: 2px solid black;
   font-size: 18px;
 }
 
@@ -190,12 +471,16 @@ nav .list-group ul .hide {
   width: 30%;
   height: 30px;
   line-height: 30px;
-  background-color: forestgreen;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 #section06 #giveback input {
+  width: 70%;
+  height: 30px;
+}
+
+#section06 #giveback select {
   width: 70%;
   height: 30px;
 }
@@ -206,11 +491,10 @@ nav .list-group ul .hide {
 }
 
 #section06 #giveback .btn {
+  display: block;
   width: 150px;
-  /* height: 30px; */
-  background-color: teal;
-  /* line-height: 30px; */
-  margin: 20px 132.5px;
+  background-color: rgba(255, 0, 0, 0.644);
+  margin: 20px auto;
 }
 
 #section06 .contain {
@@ -220,7 +504,12 @@ nav .list-group ul .hide {
 #section06 .icon {
   height: 50px;
   width: 50px;
-  background-color: goldenrod;
+  background-color: white;
   border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

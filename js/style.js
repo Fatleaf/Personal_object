@@ -42,10 +42,29 @@ window.onscroll = function () {
         nav_a[5].classList.add('longer')
     }
 
-   
-
     // console.log(section03.clientTop);
 }
+
+$(function(){
+    checkName();
+});
+
+//判斷input暱稱
+function checkName(){
+    $('#guess_name').on('blur' ,function(){
+        if (this.value.length == '') {
+            $('#nametip').text('請輸入至少一個字');
+        }else{
+            $('#nametip').text('');
+        }
+        });
+};
+
+// var sec03_photo = $('#section03 .photo') ;//想辦法把data-aos效果用JS移除
+
+// console.log();
+
+
 // for (let index = 0; index < list.length; index++) {
 //     const element = list[index];
 //     list[index].classList.remove('hidden')

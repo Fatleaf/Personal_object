@@ -1,0 +1,567 @@
+* {
+    box-sizing: border-box;
+}
+
+$bg_gray: rgb(227, 225, 223);
+$red01: rgba(255, 0, 0, 0.644);
+
+.box {
+    width: 100%;
+    height: 60px;
+    background-color: cadetblue;
+}
+
+.photo {
+    width: 100%;
+    height: 60px;
+    background-color: green;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//圖片置中
+.photo_center{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//菜單標題
+.text_center{
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    background-color: brown;
+    color: white;
+}
+
+//JS提示文字
+.tip{
+    // background-color: white;
+    color: red;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+//文字靠左
+.text_left{
+    text-align: left;
+}
+
+//菜名樣式
+.menu_name{
+    width: 76%;
+}
+
+header {
+    height: 100vh;
+    background-image: url(/images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #logo{
+        background-attachment: fixed;    
+    }
+
+
+    #headerPhoto{
+
+        img{
+            &:nth-child(1){
+                z-index: 1;
+                position: relative;
+                top: 0;
+            }
+            //蛤蠣
+            &:nth-child(2){
+                z-index: 0;
+                position: absolute;
+                bottom: -100px;
+                left: -100px;
+                transform: rotate(90deg);
+            }
+            //地瓜葉
+            &:nth-child(3){
+                z-index: 2;
+                position: absolute;
+                bottom: -200px;
+                left: 50px;
+            }
+            //高麗菜
+            &:nth-child(4){
+                z-index: 2;
+                position: absolute;
+                bottom: -200px;
+                right: 0;
+            }
+            //蔥
+            &:nth-child(5){
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                right: -70px;
+            }
+
+            @media (max-width: 767.98px) {
+                //蛤蠣
+                &:nth-child(2){
+                    z-index: 0;
+                    position: absolute;
+                    bottom: -100px;
+                    left: -24%;
+                    transform: rotate(90deg);
+                }
+                //地瓜葉
+                &:nth-child(3){
+                    z-index: 2;
+                    position: absolute;
+                    bottom: -32%;
+                    left: 50px;
+                }
+                //高麗菜
+                &:nth-child(4){
+                    z-index: 2;
+                    position: absolute;
+                    bottom: -32%;
+                    right: 0;
+                }
+                //蔥
+                &:nth-child(5){
+                    z-index: 1;
+                    position: absolute;
+                    bottom: 0;
+                    right: -70px;
+                }
+            }
+            @media (max-width: 575.98px) {
+                //蛤蠣
+                &:nth-child(2){
+                    z-index: 0;
+                    position: absolute;
+                    bottom: -13%;
+                    left: -15%;
+                    transform: rotate(90deg);
+                }
+                //地瓜葉
+                &:nth-child(3){
+                    z-index: 2;
+                    position: absolute;
+                    bottom: -32%;
+                    left: 50px;
+                }
+                //高麗菜
+                &:nth-child(4){
+                    z-index: 2;
+                    position: absolute;
+                    bottom: -32%;
+                    right: 0;
+                }
+                //蔥
+                &:nth-child(5){
+                    z-index: 1;
+                    position: absolute;
+                    bottom: 0;
+                    right: -10%;
+                }
+            }
+        }
+    }
+
+}
+
+#section01 {
+
+    .container-fluid{
+        position: fixed;
+        .logo{
+            height: 90px;
+            width: 90px;
+            background-image: url(/images/01-頁首/LOGO.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .logo_text{
+            line-height: 90px;
+            letter-spacing: 10px;
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+
+    .container{
+        height: calc(100vh - 108px);
+        .photo{
+            // background-image: url(/images/01-頁首/蛤仔麵01.png);
+            // background-position: center;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color: transparent;
+            
+        }
+
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    // pointer-events: none;
+
+    .list-group{
+        height: 100vh;
+
+        ul{
+            height: 60%;
+            width: 140px;
+            position: relative;
+            padding: 0;
+            a{
+                list-style-type: none;
+                width: 80px;
+                height: 50px;
+                background-color: rgba(255, 0, 0, 0.644);
+                line-height: 50px;
+                text-align: center;
+                text-decoration: none;
+                transition: 0.5s;
+                font-size: 12px;
+                // overflow: hidden;
+                // white-space: nowrap;
+                // text-overflow: inherit;
+                border-bottom-left-radius: 30px; 
+                border-top-left-radius: 30px; 
+                
+                li{
+                    list-style-type: none;
+                    color: black;
+                }
+                
+            }
+
+            .longer{
+                width: 150px;
+                font-size: 18px;
+                // border-radius: unset;
+            }
+
+            .hide{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// 傳統作法區塊
+#section02 {
+    background-color: $bg_gray;
+    .box {
+        height: 300px;
+    }
+    
+    .picture{
+        .sec02_photo01{
+            background-image: url(/images/03-做法/清湯.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+
+        }
+        .sec02_photo02{
+            background-image: url(/images/03-做法/滷汁.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+
+        }
+
+    }
+
+}
+
+// 新鮮食材區塊
+#section03 {
+    position: relative;
+    // padding: 0 80px;
+    .photo{
+        height: 100vh;
+        width: 600px;
+        transition: 0.5s;
+        background-size: cover;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+        
+        display: flex;
+        align-items: center;
+        justify-items: baseline;
+        flex-direction: row-reverse;
+        padding-bottom: 20px;
+
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        color: white;
+        font-size: 32px;
+
+        span{
+            height: 120px;
+        }
+        
+        &:hover{
+            width: 20%;
+            z-index: 4;
+            cursor: pointer;
+        }
+
+        &:hover~.mask{
+            background-color: rgba(0, 0, 0, 0.815);
+            z-index: 3;
+        }
+
+
+    }
+
+    .mask{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+        transition: 0.5s;
+        // pointer-events: none;
+    }
+
+    h1{
+        position: absolute;
+        top: 50px;
+        left: 6.25%;
+        z-index: 5;
+        color: white;
+    }
+
+    @media (max-width: 991.98px) {
+        h1{
+            position: unset;
+            color: black;
+            text-align: center;
+            width: 100%;
+            padding: 30px;
+        }
+        .photo{
+            height: 12.5%;
+            width: 100%;
+            writing-mode: unset;
+
+            justify-content: center;
+            span{
+                height: unset;
+                padding: 30px;
+            }
+        }
+        
+    }
+
+}
+
+// 美味菜單區塊
+#section04 {
+    background-color: $bg_gray;
+    table{
+        text-align: center;
+        width: 100%;
+        th{
+            padding: 3px;
+        }
+        thead{
+            tr{
+                th{
+                    border-bottom: 2px solid black;
+                }
+            }
+        }
+    }
+    // .box {
+    //     height: 500px;
+    // }
+}
+
+// 關於江淮區塊
+#section05 {
+    .box {
+        height: 445px;
+        width: 445px;
+        position: relative;
+
+        //第一個大圓圖
+        &:nth-child(1)::after{
+            content: '';
+            height: 2px;
+            width: 475px;
+            background-color: black;
+
+            position: absolute;
+            top: 46%;
+            left: 444px;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(2),&:nth-child(5) {
+            width: 255px;
+            height: unset;
+            background-color: unset;
+            line-height: 25px;
+        }
+        &:nth-child(2) {
+            margin-right: 255px;
+        }
+        
+        //第二個大圓圖
+        &:nth-child(4)::before{
+            content: '';
+            height: 2px;
+            width: 475px;
+            background-color: black;
+
+            position: absolute;
+            top: 49%;
+            right: 444px;
+            transform: translateY(-50%);
+        }
+
+    }
+    @media (max-width: 991.98px) {
+        .box{
+            
+            &:nth-child(1)::after{
+                content: '';
+                height: 0;
+                width: 0;
+                background-color: black;
+    
+                position: unset;
+    
+            }
+            &:nth-child(4)::before{
+                content: '';
+                height: 0;
+                width: 0;
+                background-color: black;
+    
+                position: unset;
+    
+            }
+            &:nth-child(2), &:nth-child(5) {
+                width: 100%;
+                height: unset;
+                background-color: unset;
+                line-height: 25px;
+                margin: 0;
+                padding: 20px 0;
+            }
+
+            &:nth-child(1), &:nth-child(4) {
+                margin: auto;
+            }
+        }
+
+    }
+
+}
+
+// 聯絡我們區塊
+#section06 {
+    background-color: $bg_gray;
+    .content{
+        height: 572px;
+        border: 2px solid black;
+
+        &:nth-child(1){
+            background-color: darkgray;
+        }
+
+        &:nth-child(2){
+            background-color: darkgray;
+            color: black;
+        }
+    }
+
+    #connection{
+        font-size: 21px;
+
+        .box{
+            height: 62.3px;
+            width: 62.3px;
+            background-color: transparent;
+        }
+        
+        span{
+            border-bottom: 2px solid black;
+            font-size: 18px;
+        }
+        
+    }
+
+    #giveback{
+
+        // background-color: black;
+        label {
+            width: 30%;
+            height: 30px;
+            line-height: 30px;
+            // background-color: forestgreen;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 70%;
+            height: 30px;
+        }
+
+        select{
+            width: 70%;
+            height: 30px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 100%;
+        }
+
+        .btn {
+            display: block;
+            width: 150px;
+            background-color: $red01;
+            margin: 20px auto;
+        }
+    }
+
+    .contain {
+        width: 100%;
+    }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+//footer
+footer{
+    text-align: center;
+    color: white;
+}
