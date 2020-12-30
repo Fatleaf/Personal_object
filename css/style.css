@@ -53,7 +53,7 @@
 
 header {
   height: 100vh;
-  background-image: url(/images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-image: url(../images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -163,7 +163,7 @@ header #headerPhoto img:nth-child(5) {
 #section01 .container-fluid .logo {
   height: 90px;
   width: 90px;
-  background-image: url(/images/01-頁首/LOGO.png);
+  background-image: url(../images/01-頁首/LOGO.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -240,7 +240,7 @@ nav .list-group ul .hide {
 }
 
 #section02 .picture .sec02_photo01 {
-  background-image: url(/images/03-做法/清湯.jpg);
+  background-image: url(../images/03-做法/清湯.jpg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -248,7 +248,7 @@ nav .list-group ul .hide {
 }
 
 #section02 .picture .sec02_photo02 {
-  background-image: url(/images/03-做法/滷汁.jpg);
+  background-image: url(../images/03-做法/滷汁.jpg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -261,7 +261,7 @@ nav .list-group ul .hide {
 
 #section03 .photo {
   height: 100vh;
-  width: 600px;
+  width: 12.5%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: cover;

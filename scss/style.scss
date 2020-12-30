@@ -60,7 +60,7 @@ $red01: rgba(255, 0, 0, 0.644);
 
 header {
     height: 100vh;
-    background-image: url(/images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+    background-image: url(../images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -181,7 +181,7 @@ header {
         .logo{
             height: 90px;
             width: 90px;
-            background-image: url(/images/01-頁首/LOGO.png);
+            background-image: url(../images/01-頁首/LOGO.png);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -197,7 +197,7 @@ header {
     .container{
         height: calc(100vh - 108px);
         .photo{
-            // background-image: url(/images/01-頁首/蛤仔麵01.png);
+            // background-image: url(images/01-頁首/蛤仔麵01.png);
             // background-position: center;
             // background-size: contain;
             // background-repeat: no-repeat;
@@ -268,7 +268,7 @@ nav {
     
     .picture{
         .sec02_photo01{
-            background-image: url(/images/03-做法/清湯.jpg);
+            background-image: url(../images/03-做法/清湯.jpg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -276,7 +276,7 @@ nav {
 
         }
         .sec02_photo02{
-            background-image: url(/images/03-做法/滷汁.jpg);
+            background-image: url(../images/03-做法/滷汁.jpg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -294,7 +294,7 @@ nav {
     // padding: 0 80px;
     .photo{
         height: 100vh;
-        width: 600px;
+        width: 12.5%;
         transition: 0.5s;
         background-size: cover;
         background-color: transparent;
