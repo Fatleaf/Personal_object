@@ -157,6 +157,12 @@ header #headerPhoto img:nth-child(5) {
   z-index: 3;
 }
 
+@media (max-width: 576px) {
+  #section01 .container-fluid {
+    padding: 0;
+  }
+}
+
 #section01 .container-fluid .logo {
   height: 90px;
   width: 90px;
@@ -171,6 +177,37 @@ header #headerPhoto img:nth-child(5) {
   letter-spacing: 10px;
   margin: 0;
   margin-left: 10px;
+}
+
+@media (max-width: 576px) {
+  #section01 .container-fluid .logo_text {
+    line-height: unset;
+    letter-spacing: unset;
+  }
+}
+
+#section01 .container-fluid #weatherCard {
+  height: 100%;
+  padding-left: 10px;
+}
+
+#section01 .container-fluid #weatherCard .WeatherPhoto {
+  height: 50px;
+  width: 60px;
+}
+
+#section01 .container-fluid #weatherCard h4 {
+  margin: 0;
+}
+
+#section01 .container-fluid #weatherCard p {
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  #section01 .container-fluid #weatherCard p {
+    font-size: 9px;
+  }
 }
 
 #section01 .container-fluid #nav_phone {
