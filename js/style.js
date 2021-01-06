@@ -53,6 +53,16 @@ $(function(){
         $('#nav_phone ul').css('display', 'none');
     });
 
+    //上方NAV背景顏色
+    $(window).scroll(function () {
+        var scrollVal = $(this).scrollTop();
+        if (scrollVal > section02.offsetTop) {
+            $('#logo').css('background-color', 'rgb(227, 225, 223)');
+        }else{
+            $('#logo').css('background-color', 'transparent');
+        }
+      });
+
     //一進入就判斷視窗寬度
     if (document.body.clientWidth > 768) {
         $('#navBig').show();
@@ -78,6 +88,7 @@ $(function(){
             $('#nav_phone').show();
             $('#navBig').hide();
         }
+
     }); 
 
     //天氣卡
@@ -86,7 +97,7 @@ $(function(){
             return response.json();
         })
         .then(function(Weather) {
-            console.log(Weather);
+            // console.log(Weather);
             var ChangHua = Weather.records.location[20].weatherElement  //彰化地區
             var PoP = ChangHua[0].time[0].parameter.parameterName    //降雨機率
             var MinT = ChangHua[2].time[0].parameter.parameterName   //最低溫度
@@ -94,20 +105,20 @@ $(function(){
 
             var weatherImg
             if (PoP < 1) {
-                weatherImg = 'https://i.pinimg.com/originals/fb/c1/f3/fbc1f34bc9c42bc68460798eb6e7b462.jpg'
+                weatherImg = 'images/05-Icon/sun.svg'
             } else if (PoP < 50) {
-                weatherImg = 'https://cms-assets.tutsplus.com/uploads/users/16/posts/30551/final_image/cloud850.png'
+                weatherImg = 'images/05-Icon/cloud.svg'
             } else{
-                weatherImg = 'https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/cloud_rain.png'
+                weatherImg = 'images/05-Icon/rain.svg'
             }
 
             $('#weatherCard').append(`
-                <h5>彰化縣天氣</h5>
+                <h5>${Weather.records.location[20].locationName}天氣</h5>
                 <div class="WeatherPhoto photo_center" style="background-image: url(${weatherImg});"></div>
                 <p>溫度:${MinT} ~ ${MaxT}度</p>`);
 
-            console.log(PoP,MinT,MaxT);
-            //調整天氣狀況圖片CSS部分
+            // console.log(PoP,MinT,MaxT);
+            
         });
 
 });

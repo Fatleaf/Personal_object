@@ -152,18 +152,18 @@ header #headerPhoto img:nth-child(5) {
   }
 }
 
-#section01 .container-fluid {
+#section01 #logo {
   position: fixed;
   z-index: 3;
 }
 
 @media (max-width: 576px) {
-  #section01 .container-fluid {
+  #section01 #logo {
     padding: 0;
   }
 }
 
-#section01 .container-fluid .logo {
+#section01 #logo .logo {
   height: 90px;
   width: 90px;
   background-image: url(../images/01-頁首/LOGO.png);
@@ -172,7 +172,7 @@ header #headerPhoto img:nth-child(5) {
   background-position: center;
 }
 
-#section01 .container-fluid .logo_text {
+#section01 #logo .logo_text {
   line-height: 90px;
   letter-spacing: 10px;
   margin: 0;
@@ -180,37 +180,39 @@ header #headerPhoto img:nth-child(5) {
 }
 
 @media (max-width: 576px) {
-  #section01 .container-fluid .logo_text {
+  #section01 #logo .logo_text {
     line-height: unset;
     letter-spacing: unset;
   }
 }
 
-#section01 .container-fluid #weatherCard {
+#section01 #logo #weatherCard {
   height: 100%;
   padding-left: 10px;
 }
 
-#section01 .container-fluid #weatherCard .WeatherPhoto {
+#section01 #logo #weatherCard .WeatherPhoto {
   height: 50px;
   width: 60px;
+  background-size: contain;
+  margin: auto;
 }
 
-#section01 .container-fluid #weatherCard h4 {
+#section01 #logo #weatherCard h5 {
   margin: 0;
 }
 
-#section01 .container-fluid #weatherCard p {
+#section01 #logo #weatherCard p {
   margin: 0;
 }
 
 @media (max-width: 576px) {
-  #section01 .container-fluid #weatherCard p {
+  #section01 #logo #weatherCard p {
     font-size: 9px;
   }
 }
 
-#section01 .container-fluid #nav_phone {
+#section01 #logo #nav_phone {
   width: 90px;
   height: 90px;
   background-color: rgba(255, 0, 0, 0.644);
@@ -220,12 +222,12 @@ header #headerPhoto img:nth-child(5) {
   line-height: 90px;
 }
 
-#section01 .container-fluid #nav_phone ul {
+#section01 #logo #nav_phone ul {
   padding: 0;
   list-style-type: none;
 }
 
-#section01 .container-fluid #nav_phone ul li {
+#section01 #logo #nav_phone ul li {
   display: list-item;
   background-color: rgba(255, 0, 0, 0.644);
   text-align: center;
@@ -233,7 +235,7 @@ header #headerPhoto img:nth-child(5) {
   line-height: 20px;
 }
 
-#section01 .container-fluid #nav_phone ul li a {
+#section01 #logo #nav_phone ul li a {
   text-decoration: none;
   color: white;
 }

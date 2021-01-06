@@ -171,12 +171,13 @@ header {
 
 #section01 {
 
-    .container-fluid{
+    #logo{
         position: fixed;
         z-index: 3;
         @media (max-width: 576px) {
             padding: 0;
         }
+        
         .logo{
             height: 90px;
             width: 90px;
@@ -204,8 +205,10 @@ header {
             .WeatherPhoto{
                 height: 50px;
                 width: 60px;
+                background-size: contain;
+                margin: auto;
             }
-            h4{
+            h5{
                 margin: 0;
                 @media (max-width: 576px) {
                     // font-size: 10px;
