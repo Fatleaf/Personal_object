@@ -91,7 +91,7 @@ $(function(){
 
     }); 
 
-    //天氣卡
+    //從中央氣象局接資料，天氣卡
     fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
         .then(function(response) {
             return response.json();
