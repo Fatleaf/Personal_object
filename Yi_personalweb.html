@@ -120,17 +120,7 @@
         <div id="section03">
             <div class="container-fluid d-flex p-0 flex-wrap flex-lg-nowrap">
                 <h1>新鮮食材</h1>
-                <div class="photo" style="background-image: url(images/02-食材/地瓜葉.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>地瓜葉</span></div>
-                <div class="photo" style="background-image: url(images/02-食材/萵苣.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>A菜</span>
-                </div>
-                <div class="photo" style="background-image: url(images/02-食材/豬肉01.JPG);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>豬肉</span></div>
-                <div class="photo" style="background-image: url(images/02-食材/雞肉.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>雞肉</span>
-                </div>
-                <div class="photo" style="background-image: url(images/02-食材/蛤蠣.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>蛤蠣</span></div>
-                <div class="photo" style="background-image: url(images/02-食材/蝦子01.JPG);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>蝦子</span>
-                </div>
-                <div class="photo" style="background-image: url(images/02-食材/高麗菜.jpg);" data-aos="fade-down" data-aos-anchor-placement="top-center"><span>高麗菜</span></div>
-                <div class="photo" style="background-image: url(images/02-食材/空心菜.jpg);" data-aos="fade-up" data-aos-anchor-placement="top-center"><span>空心菜</span>
+                <div class="photo" v-for="food in kinds" :style="food.link"><span>{{ food.title }}</span></div>
                 </div>
                 <div class="mask"></div>
             </div>
@@ -141,8 +131,8 @@
             <div class="container pt-5">
                 <h1 style="text-align: center;">美味菜單</h1>
                 <div class="row justify-content-around p-4">
-                    <div class="col-12 col-lg-4 p-2">                        
-                        <div class="text_center">麵飯米粉<small>大碗加10元</small></div>
+                    <div class="col-12 col-lg-4 p-2" v-for="(food, index) in menu.length">                        
+                        <div class="text_center">{{ menu[index].name }}<small>大碗加10元</small></div>
                         <table>
                             <thead>
                                 <tr>
@@ -153,29 +143,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th class="text_left">蛤仔麵</th>
-                                    <th>40</th>
+                                <tr v-for="item in menu[index].contents">
+                                    <th class="text_left">{{item.title}}</th>
+                                    <th>{{item.price}}</th>
                                     <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th class="text_left">蛤仔米粉</th>
-                                    <th>40</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th class="text_left">蛤仔飯</th>
-                                    <th>40</th>
-                                    <th></th>   
                                     <th></th>
                                 </tr>
                             </tbody>
                         </table>
                         <!-- <div class="box"></div> -->
                     </div>
-                    <div class="col-12 col-lg-4 p-2">
+                    <!-- <div class="col-12 col-lg-4 p-2">
                         <div class="text_center">小菜<small>大碗加10元</small></div>
                         <table>
                             <thead>
@@ -207,7 +185,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <!-- <div class="box"></div> -->
+                       
                     </div>
                     <div class="col-12 col-lg-4 p-2">
                         <div class="text_center">湯類<small>大碗加10元</small></div>
@@ -241,9 +219,50 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <!-- <div class="box"></div> -->
+                       
+                    </div> -->
+                    
+                    <div class="my-4" id="addMenu">
+                        <p>想來點自行設計的酷菜單嗎?</p>
+                        
+                        <div class="btn" @click="change">GO!</div>
                     </div>
+                    <div class="w-100"></div>    
+                    <new-menu v-if="isShow"></new-menu>   
+                    <!-- <div class="col-12 col-lg-4">
+                        <label for="">食物名稱: <input v-model="title"></label>
+                        <label for="">價&emsp;&emsp;格: <input v-model.number="price"></label>
+                        <br>
+                        <div class="btn" @click="add">新增</div>
+                    </div>  -->
+
+                    <!-- <div class="col-12 col-lg-4 p-2" v-if="isShow">                        
+                        <div class="text_center">菜色種類
+                        <small>大碗加10元</small></div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="menu_name">品&emsp;&emsp;名</th>
+                                    <th>單價</th>
+                                    <th>小</th>
+                                    <th>大</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text_left">控肉飯</th>
+                                    <th>50</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                    
+
                 </div>
+
+
             </div>
         </div>
 
@@ -301,7 +320,7 @@
                             <input type="text" name="guess_name" id="guess_name" placeholder="請輸入文字">
                             <div id="nametip" class="tip"></div>
 
-                            <label for="email">電子信箱:</label>
+                            <label for="vote_email">電子信箱:</label>
                             <input type="email" name="email" id="vote_email">
 
                             <label for="FeedBackType">建議類別:</label>
@@ -316,7 +335,7 @@
                             <textarea name="" id="" cols="30" rows="10" name="description"></textarea>
                         </div>
                     </form>
-                    <div class="btn" id="submit">這是按鈕</div>
+                    <div class="btn" id="submit" @click="saywhat">這是按鈕</div>
                 </div>
 
                 <div class="contain col-12 d-flex justify-content-center pt-5">
@@ -351,7 +370,11 @@
         AOS.init();
     </script>
 
+    <!-- Vue 3.x -->
+    <script src="https://unpkg.com/vue@next"></script>
+
     <script src="js/style.js"></script>
+    <script src="js/vue.js"></script>
 
 
 </body>

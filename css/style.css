@@ -51,6 +51,13 @@
   width: 76%;
 }
 
+.btn {
+  display: block;
+  width: 150px;
+  background-color: rgba(255, 0, 0, 0.644);
+  margin: 20px auto;
+}
+
 header {
   height: 100vh;
   background-image: url(../images/01-頁首/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
@@ -331,7 +338,7 @@ nav .list-group ul .hide {
   background-size: cover;
   background-color: transparent;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,13 +365,13 @@ nav .list-group ul .hide {
 
 #section03 .photo:hover {
   width: 20%;
-  z-index: 4;
+  z-index: 6;
   cursor: pointer;
 }
 
 #section03 .photo:hover ~ .mask {
   background-color: rgba(0, 0, 0, 0.815);
-  z-index: 3;
+  z-index: 5;
 }
 
 #section03 .mask {
@@ -374,7 +381,7 @@ nav .list-group ul .hide {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   pointer-events: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;

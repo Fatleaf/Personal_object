@@ -71,8 +71,8 @@ $(function(){
     } else {
         $('#nav_phone').show();
         $('#navBig').hide();
-        $('#section03 .photo').attr('data-aos', 'fade-up');
-        $('#section03 .photo').attr('data-aos-anchor-placement', 'top-bottom');
+        // $('#section03 .photo').attr('data-aos', 'fade-up');
+        // $('#section03 .photo').attr('data-aos-anchor-placement', 'top-bottom');
     }
     
   
