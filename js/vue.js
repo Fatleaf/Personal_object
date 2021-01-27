@@ -102,7 +102,7 @@ const menu = Vue.createApp({
     },
     methods: {
         change() {
-            this.isShow == false ? this.isShow = true :  this.isShow = false;
+            this.isShow == false ? this.isShow = true : this.isShow = false;
         }
     }
 });
@@ -122,9 +122,9 @@ menu.component('newMenu',{
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(i, index) in title.name.length">
-                        <th class="text_left">{{ title.name[index] }}</th>
-                        <th>{{ title.price[index] }}</th>
+                    <tr v-for="(i, index) in title.food.length">
+                        <th class="text_left">{{ title.food[index].name }}</th>
+                        <th>{{ title.food[index].price }}</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -142,25 +142,22 @@ menu.component('newMenu',{
         return {
             title: 
                 {
-                    name: [],
-                    price: []
+                    food: []
                 }
             ,
             msg: '',
-            msg2: '',
+            msg2: ''
         }
     },
     methods: {
         add() {
-            (this.title.name).push(this.msg);
+            (this.title.food).push({'name': this.msg, 'price':this.msg2});
             this.msg= '';
-            (this.title.price).push(this.msg2);
             this.msg2= '';
             console.log(this.title);
         },
         clear() {
-            this.title.name = [],
-            this.title.price = []
+            this.title.food = []
         },
         checkNum() {
             if(typeof this.msg2 !== 'number'){
