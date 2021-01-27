@@ -64,6 +64,12 @@ $red01: rgba(255, 0, 0, 0.644);
     width: 150px;
     background-color: $red01;
     margin: 20px auto;
+    color: white;
+
+    &:hover{
+        background-color: #A52A2A;
+        color: white;
+    }
 }
 
 header {
@@ -627,12 +633,12 @@ nav {
             width: 100%;
         }
 
-        .btn {
-            display: block;
-            width: 150px;
-            background-color: $red01;
-            margin: 20px auto;
-        }
+        // .btn {
+        //     display: block;
+        //     width: 150px;
+        //     background-color: $red01;
+        //     margin: 20px auto;
+        // }
     }
 
     .contain {

@@ -228,7 +228,9 @@
                         <div class="btn" @click="change">GO!</div>
                     </div>
                     <div class="w-100"></div>    
-                    <new-menu v-if="isShow"></new-menu>   
+                    <keep-alive>
+                        <new-menu v-if="isShow"></new-menu>   
+                    </keep-alive>
                     <!-- <div class="col-12 col-lg-4">
                         <label for="">食物名稱: <input v-model="title"></label>
                         <label for="">價&emsp;&emsp;格: <input v-model.number="price"></label>

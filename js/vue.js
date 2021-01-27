@@ -133,9 +133,10 @@ menu.component('newMenu',{
         </div>
         <div class="col-12 col-lg-4">
             <label for="">食物名稱: <input v-model="msg"></label>
-            <label for="">價&emsp;&emsp;格: <input v-model.number="msg2"></label>
+            <label for="">價&emsp;&emsp;格: <input v-model.number="msg2" @blur="checkNum"></label>
             <br>
             <div class="btn" @click="add">新增</div>
+            <div class="btn" @click="clear">清除</div>
         </div> `,
     data() {
         return {
@@ -156,6 +157,16 @@ menu.component('newMenu',{
             (this.title.price).push(this.msg2);
             this.msg2= '';
             console.log(this.title);
+        },
+        clear() {
+            this.title.name = [],
+            this.title.price = []
+        },
+        checkNum() {
+            if(typeof this.msg2 !== 'number'){
+                alert('價格只能輸入數字唷!');
+                this.msg2 = '';
+            }
         }
     }
 });

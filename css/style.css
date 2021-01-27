@@ -56,6 +56,12 @@
   width: 150px;
   background-color: rgba(255, 0, 0, 0.644);
   margin: 20px auto;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #A52A2A;
+  color: white;
 }
 
 header {
@@ -574,13 +580,6 @@ nav .list-group ul .hide {
 #section06 #giveback textarea {
   height: 200px;
   width: 100%;
-}
-
-#section06 #giveback .btn {
-  display: block;
-  width: 150px;
-  background-color: rgba(255, 0, 0, 0.644);
-  margin: 20px auto;
 }
 
 #section06 .contain {
