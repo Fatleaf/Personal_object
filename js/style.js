@@ -89,7 +89,19 @@ $(function(){
             $('#navBig').hide();
         }
 
-    }); 
+    });
+
+    //食材點下去出現文字
+    $('#section03 .movein').hide()
+
+    $('#section03 .photo').on('click', function() {
+
+        const movein = this.querySelector('.movein')
+
+        $(movein).show().toggleClass('inActive')
+
+        // console.log(movein);
+    })
 
     //從中央氣象局接資料，天氣卡
     fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')

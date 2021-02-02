@@ -408,6 +408,21 @@ nav {
             z-index: 5;
         }
 
+        .movein{
+            transform: translateY(-100%);
+            transition: 1.5s;
+            background-color: white;
+            padding: 5px;
+            color: black;
+            border-radius: 8px;
+            &.inActive{
+                transform: translateY(-250%);
+                color: white;
+                background-color: brown;
+            }
+        }
+
+
 
     }
 

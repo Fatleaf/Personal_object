@@ -380,6 +380,24 @@ nav .list-group ul .hide {
   z-index: 5;
 }
 
+#section03 .photo .movein {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  background-color: white;
+  padding: 5px;
+  color: black;
+  border-radius: 8px;
+}
+
+#section03 .photo .movein.inActive {
+  -webkit-transform: translateY(-250%);
+          transform: translateY(-250%);
+  color: white;
+  background-color: brown;
+}
+
 #section03 .mask {
   height: 100%;
   width: 100%;
