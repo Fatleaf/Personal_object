@@ -233,6 +233,13 @@ header #headerPhoto img:nth-child(5) {
   color: white;
   text-align: center;
   line-height: 90px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #section01 #logo #nav_phone {
+    display: block;
+  }
 }
 
 #section01 #logo #nav_phone ul {
@@ -266,6 +273,12 @@ nav {
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
 }
 
 nav .list-group {
@@ -386,7 +399,7 @@ nav .list-group ul .hide {
   -webkit-transition: 1.5s;
   transition: 1.5s;
   background-color: white;
-  padding: 5px;
+  padding: 10px 5px;
   color: black;
   border-radius: 8px;
 }

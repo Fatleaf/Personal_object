@@ -43,8 +43,11 @@ function activeNav (){
 
 $(function(){
     checkName();
+    activeNav();
+    sec3Move();
 
-    $('#nav_phone ul').hide();
+    $('#section03 .movein').hide()
+
 
     $('#nav_phone').on('mouseenter', function(){
         $('#nav_phone ul').css('display', 'block');
@@ -64,44 +67,25 @@ $(function(){
       });
 
     //一進入就判斷視窗寬度
-    if (document.body.clientWidth > 768) {
-        $('#navBig').show();
-        $('#nav_phone').hide();
-        activeNav();
-    } else {
-        $('#nav_phone').show();
-        $('#navBig').hide();
-        // $('#section03 .photo').attr('data-aos', 'fade-up');
-        // $('#section03 .photo').attr('data-aos-anchor-placement', 'top-bottom');
-    }
+    // if (document.body.clientWidth > 768) {
+    // 
+    // } else {
+    //
+    // }
     
   
     //即時監控視窗寬度顯示NAV
-    $(window).resize(function() {
+    // $(window).resize(function() {
 
-        reWidth = $(window).width();
-        if (reWidth > 768) {
-            $('#nav_phone').hide();
-            $('#navBig').show();
-            activeNav();
-        }else{
-            $('#nav_phone').show();
-            $('#navBig').hide();
-        }
+    //     reWidth = $(window).width();
+    //     if (reWidth > 768) {
 
-    });
+    //     }else{
 
-    //食材點下去出現文字
-    $('#section03 .movein').hide()
+    //     }
 
-    $('#section03 .photo').on('click', function() {
+    // });
 
-        const movein = this.querySelector('.movein')
-
-        $(movein).show().toggleClass('inActive')
-
-        // console.log(movein);
-    })
 
     //從中央氣象局接資料，天氣卡
     fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
@@ -145,3 +129,23 @@ function checkName(){
         }
         });
 };
+
+
+//食材點下去出現文字
+
+function sec3Move() {
+
+    if (document.body.clientWidth > 991) {
+
+        $('#section03 .photo').on('click', function() {
+
+            const movein = this.querySelector('.movein')
+    
+            $(movein).show().toggleClass('inActive')
+    
+            // console.log(movein);
+        })
+
+    }
+
+}

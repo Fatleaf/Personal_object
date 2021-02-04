@@ -5,35 +5,43 @@ const foods = Vue.createApp({
             kinds: [
                 {
                     title: '地瓜葉',
-                    link: 'background-image: url(./images/02-食材/地瓜葉.jpg);'
+                    link: 'background-image: url(./images/02-食材/地瓜葉.jpg);',
+                    descripe: '好吃'
                 },
                 {
                     title: 'A菜',
-                    link: 'background-image: url(./images/02-食材/萵苣.jpg);'
+                    link: 'background-image: url(./images/02-食材/萵苣.jpg);',
+                    descripe: '好吃'
                 },
                 {
                     title: '豬肉',
-                    link: 'background-image: url(./images/02-食材/豬肉01.jpg);'
+                    link: 'background-image: url(./images/02-食材/豬肉01.jpg);',
+                    descripe: '台灣豬'
                 },
                 {
                     title: '雞肉',
-                    link: 'background-image: url(./images/02-食材/雞肉.jpg);'
+                    link: 'background-image: url(./images/02-食材/雞肉.jpg);',
+                    descripe: '健康美味'
                 },
                 {
                     title: '蛤蠣',
-                    link: 'background-image: url(./images/02-食材/蛤蠣.jpg);'
+                    link: 'background-image: url(./images/02-食材/蛤蠣.jpg);',
+                    descripe: '人間極品'
                 },
                 {
                     title: '蝦子',
-                    link: 'background-image: url(./images/02-食材/蝦子01.jpg);'
+                    link: 'background-image: url(./images/02-食材/蝦子01.jpg);',
+                    descripe: '滿滿的蝦紅素'
                 },
                 {
                     title: '高麗菜',
-                    link: 'background-image: url(./images/02-食材/高麗菜.jpg);'
+                    link: 'background-image: url(./images/02-食材/高麗菜.jpg);',
+                    descripe: '高營養'
                 },
                 {
                     title: '空心菜',
-                    link: 'background-image: url(./images/02-食材/空心菜.jpg);'
+                    link: 'background-image: url(./images/02-食材/空心菜.jpg);',
+                    descripe: '纖維多多!!'
                 }
             ]
         }
