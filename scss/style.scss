@@ -246,7 +246,7 @@ header {
             text-align: center;
             line-height: 90px;
             display: none;
-            
+
             @media (max-width: 768px) {
                 display: block;
             }
@@ -402,6 +402,8 @@ nav {
         color: white;
         font-size: 32px;
 
+        overflow: hidden;
+
         span{
             height: 120px;
         }
@@ -418,16 +420,28 @@ nav {
         }
 
         .movein{
-            transform: translateY(-100%);
+            transform: translate(0%, -500%);
+
             transition: 1.5s;
             background-color: white;
             padding: 10px 5px;
             color: black;
             border-radius: 8px;
+
+            @media (max-width: 991px) {
+                transform: translate(-300%, 0%);
+            }
+
             &.inActive{
-                transform: translateY(-250%);
+                transform: translate(0%, -250%);
+                // transform: translateX(0%);
+
                 color: white;
                 background-color: brown;
+
+                @media (max-width: 991px) {
+                    transform: translate(0%, 0%);
+                }
             }
         }
 

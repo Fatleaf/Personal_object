@@ -135,7 +135,6 @@ function checkName(){
 
 function sec3Move() {
 
-    if (document.body.clientWidth > 991) {
 
         $('#section03 .photo').on('click', function() {
 
@@ -146,6 +145,5 @@ function sec3Move() {
             // console.log(movein);
         })
 
-    }
 
 }
