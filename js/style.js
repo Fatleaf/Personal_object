@@ -88,12 +88,44 @@ $(function(){
 
 
     //從中央氣象局接資料，天氣卡
-    fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(Weather) {
-            // console.log(Weather);
+    //fetch款
+    // fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
+    //     .then(function(response) {
+    //         return response.json();
+    //     })
+    //     .then(function(Weather) {
+    //         // console.log(Weather);
+    //         var ChangHua = Weather.records.location[20].weatherElement  //彰化地區
+    //         var PoP = ChangHua[0].time[0].parameter.parameterName    //降雨機率
+    //         var MinT = ChangHua[2].time[0].parameter.parameterName   //最低溫度
+    //         var MaxT = ChangHua[4].time[0].parameter.parameterName   //最高溫度
+
+    //         var weatherImg
+    //         if (PoP < 1) {
+    //             weatherImg = 'images/05-Icon/sun.svg'
+    //         } else if (PoP < 50) {
+    //             weatherImg = 'images/05-Icon/cloud.svg'
+    //         } else{
+    //             weatherImg = 'images/05-Icon/rain.svg'
+    //         }
+
+    //         $('#weatherCard').append(`
+    //             <h5>${Weather.records.location[20].locationName}天氣</h5>
+    //             <div class="WeatherPhoto photo_center" style="background-image: url(${weatherImg});"></div>
+    //             <p>溫度:${MinT} ~ ${MaxT}度</p>`);
+
+    //         // console.log(PoP,MinT,MaxT);
+    
+    //     });
+
+
+    //ajax款
+    $.ajax({
+        type: 'GET',
+        url: 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D',
+        success: function(Weather) {
+            console.log(Weather);
+
             var ChangHua = Weather.records.location[20].weatherElement  //彰化地區
             var PoP = ChangHua[0].time[0].parameter.parameterName    //降雨機率
             var MinT = ChangHua[2].time[0].parameter.parameterName   //最低溫度
@@ -113,9 +145,10 @@ $(function(){
                 <div class="WeatherPhoto photo_center" style="background-image: url(${weatherImg});"></div>
                 <p>溫度:${MinT} ~ ${MaxT}度</p>`);
 
-            // console.log(PoP,MinT,MaxT);
-            
-        });
+                // console.log(Weather.records.location);
+        }
+    })
+    
 
 });
 
